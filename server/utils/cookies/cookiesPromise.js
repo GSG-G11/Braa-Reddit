@@ -16,5 +16,17 @@ return new Promise((resolve,reject)=>{
 })
 }
 
+const veryfy=(id)=>{
+    return new Promise((resolve,reject)=>{
+        jwt.verify(id,process.env.PRIVATEKEY,(err,token)=>{
+            if(err){
+                reject(err)
+            }else{
+                resolve(token)
+            }
+        })
+    })
+}
 
-module.exports={signcookie}
+
+module.exports={signcookie,veryfy}

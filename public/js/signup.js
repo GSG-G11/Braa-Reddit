@@ -87,8 +87,14 @@ form.addEventListener("submit", (event) => {
       password: password.value,
     }),
   })
-    .then((response) => response.json())
-    .then((data) => {
-      swal("ERROR!", data, "error");
-    });
+  .then((response) =>  response.json())
+  .then((data)=>{
+      console.log(data)
+      if(data.state){
+          window.location.assign('/home')
+      }else{
+        swal('ERROR!',data.message,'error')
+      }
+  }
+  )
 });
