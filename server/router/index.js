@@ -1,7 +1,7 @@
 const {join} = require('path');
 const app = require('../app');
 const router = require('express').Router();
-const {signUpController,loginController} = require('../controler')
+const {signUpController,loginController,logoutController} = require('../controler')
 const serverError = require('../controler/error')
 const {authHome,authUser} =require('../middleware')
 
@@ -16,6 +16,7 @@ router.get('/home',authHome,(req,res)=>{
 })
 router.post('/signup', signUpController)
 router.post('/login', loginController)
+router.get('/logout',logoutController)
   
 router.use(serverError)
  
