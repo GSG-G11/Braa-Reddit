@@ -51,4 +51,11 @@ fetch("/getPost")
 //get username to person was login
 fetch("/user")
   .then((data) => data.json())
-  .then(console.log);
+  .then((value) => {
+    console.log(value[0].username)
+    const userNa = document.querySelector(".username");
+    const btn = document.createElement("button");
+    btn.className = "user";
+    btn.textContent = value[0].username;
+    userNa.appendChild(btn);
+  });

@@ -166,8 +166,24 @@ nav {
   font-weight: bold;
   text-align: center;
   font-family: 'lato black';
-
 }
+.user{
+  display: inline-block;
+    border: 2px solid orangered;
+    padding: 5px 5px !important;
+    border-radius: 50px !important;
+    font-weight: bold;
+    color: white;
+    background-color: orangered;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-right: 10px;
+    margin-left: 5px;
+  }
+  .user:hover {
+    background-color: orange;
+  }
 .title {
   color: #1a1a1b;
   padding: 10px;

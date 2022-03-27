@@ -1,9 +1,9 @@
 const connection = require("../config/connection");
 
-const getUserByname = (id) => {
+const getUserByname = (userID) => {
   return connection.query({
     text: "select username from users where id = $1 ;",
-    values: [id],
+    values: [userID],
   });
 };
 
