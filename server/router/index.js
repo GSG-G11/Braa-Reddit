@@ -6,6 +6,8 @@ const {
   loginController,
   logoutController,
   addpostController,
+  getPostController,
+  getusernameController,
 } = require("../controler");
 const serverError = require("../controler/error");
 const { authHome, authUser } = require("../middleware");
@@ -23,7 +25,10 @@ router.post("/signup", signUpController);
 router.post("/login", loginController);
 router.get("/logout", logoutController);
 router.post("/addpost", authHome,addpostController);
-
+router.get('/getPost',getPostController)
+router.get('/user',authHome,getusernameController)
 router.use(serverError);
+
+
 
 module.exports = router;
