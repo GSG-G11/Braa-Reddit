@@ -12,7 +12,7 @@ const {
   deletePostController,
   getProfileUserController,
 } = require("../controler");
-const serverError = require("../controler/error");
+const {serverError,clientError} = require("../controler/error");
 const { authHome, authUser } = require("../middleware");
 
 router.get("/signup", authUser, (req, res) => {
@@ -37,6 +37,7 @@ router.get("/userPosts", authHome, getUserPost);
 router.delete("/delete/:id", deletePostController);
 router.get("/profile/:id", getProfileUserController);
 
+router.use(clientError);
 router.use(serverError);
 
 module.exports = router;
