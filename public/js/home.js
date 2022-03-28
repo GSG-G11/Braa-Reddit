@@ -52,7 +52,6 @@ fetch("/getPost")
 fetch("/user")
   .then((data) => data.json())
   .then((value) => {
-    console.log(value[0].username)
     const userNa = document.querySelector(".username");
     const btn = document.createElement("button");
     btn.className = "user";

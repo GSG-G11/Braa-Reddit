@@ -38,37 +38,6 @@ a {
   background: var(--dark-gray);
 }
 
-/* Header Section Style */
-
-.main-header {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--dark-gray);
-  align-items: center;
-  padding: 0.2rem 2rem;
-  border-radius: 0 0 80px 80px;
-  height: 350px;
-  width: 100%;
-}
-
-.logo-div {
-  width: 18%;
-}
-
-.logo-img {
-  width: 70%;
-  object-fit: cover;
-  margin-left: 35px;
-}
-
-.main-div {
-  width: 100%;
-  width: 100%;
-  top: 3.7rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 nav {
   height: 50px;
@@ -84,7 +53,7 @@ nav {
 }
 .nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   font-family: "Nunito Sans", sans-serif;
   background-color: white;
@@ -112,11 +81,11 @@ nav {
   }
 }
 
-.nav a {
+ .nav a {
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} 
 
 .nav .btnlk {
   display: flex;
@@ -124,6 +93,23 @@ nav {
   justify-content: center;
   gap: 10px;
 }
+
+#btnH{
+     /* display: inline-block; */
+     border: 2px solid orangered;
+     padding: 10px 15px !important;
+     border-radius: 50px !important;
+     height: 40px;
+     text-align: center;
+     font-weight: bold;
+     color: white;
+     background-color: orangered;
+     text-transform: capitalize;
+     cursor: pointer;
+     transition: 0.3s;
+ }
+
+
 
 #logout {
   display: inline-block;
@@ -153,9 +139,35 @@ nav {
   font-weight: bold;
   text-align: center;
   font-family: "lato black";
+  margin-right: 40px;
 }
 .logo:hover {
   color: orange;
+}
+.search {
+  width: 30%;
+  background-color: #f5f3f3;
+  border: 1px solid #b3b3b3;
+  border-radius: 5px;
+}
+.search .icon {
+  padding: 5px;
+  font-size: 20px;
+  color: #b3b3b3;
+}
+.search input {
+  width: 40%;
+  border: none;
+  background-color: #f5f3f3;
+  padding: 7px;
+  font-size: 18px;
+}
+.search:hover {
+  border-color: rgb(78, 125, 197);
+  background-color: #fff;
+}
+.search:hover input {
+  background-color: #fff;
 }
 .username {
   color: orangered;
@@ -168,7 +180,6 @@ nav {
 .user {
   display: inline-block;
   border: 2px solid orangered;
-  padding: 5px 5px !important;
   border-radius: 50px !important;
   font-weight: bold;
   color: white;
@@ -183,6 +194,39 @@ nav {
   background-color: orange;
 }
 
+
+.creating-post {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 15px 0;
+}
+.creating-post input {
+  width: 80%;
+  height: 30px;
+  border: none;
+  margin: 7px;
+  background-color: #f5f3f3;
+  border: 1px solid #b3b3b3;
+  padding: 10px;
+  border-radius: 3px;
+}
+.creating-post input:hover {
+  background-color: #fff;
+}
+.posts .item, .post-container {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 15px;
+  height: 60px;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(179, 179, 179);
+  border-image: initial;
+}
 /* .posts-container .post .post-body {
   padding: 20px;
   flex: 1;

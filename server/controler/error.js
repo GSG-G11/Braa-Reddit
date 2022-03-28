@@ -1,7 +1,7 @@
 const serverError = (err, req, res, next) => {
     const internalServerError =
       '<p style="font-size: 10vh; text-align: center;">500!</p>';
-      console.log(err)
+      // console.log(err)
       if (err.status) {
         res
           .status(err.status)

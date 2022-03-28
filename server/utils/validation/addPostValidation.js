@@ -1,8 +1,8 @@
 const Joi = require("joi");
 
 const addPostSchema = Joi.object({
-  title: Joi.string().alphanum().required(),
-  content: Joi.string().alphanum().required()
+  title: Joi.string().required(),
+  content: Joi.string().required()
 });
 
 module.exports=addPostSchema

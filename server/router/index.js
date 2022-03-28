@@ -21,6 +21,9 @@ router.get("/login", authUser, (req, res) => {
 router.get("/home", authHome, (req, res) => {
   res.sendFile(join(__dirname, "..", "..", "public", "html", "home.html"));
 });
+router.get("/profile", authHome, (req, res) => {
+    res.sendFile(join(__dirname, "..", "..", "public", "html", "profile.html"));
+  });
 router.post("/signup", signUpController);
 router.post("/login", loginController);
 router.get("/logout", logoutController);
