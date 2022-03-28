@@ -3,6 +3,9 @@ const title = document.getElementById("title");
 const content = document.getElementById("content");
 const saveButton = document.getElementById("saveButton");
 
+const id = window.location.href
+console.log('asd'+id)
+
 //logout
 logoutBtn.addEventListener("click", (e) => {
   e.preventDefault();
@@ -23,31 +26,31 @@ saveButton.addEventListener("click", (e) => {
   }).then((data) => window.location.assign("/home"));
 });
 
-{/* <div class="post-body">
-<span class="by">Posted by Braa</span>
-<h3 class="titlePost">what a great job</h3>
-<p class="content">wow</p>
-</div> */}
-const posts = document.querySelector('.post-body')
+const posts = document.querySelector(".post-body");
 //get post
 fetch("/getPost")
   .then((data) => data.json())
   .then((value) =>
     value.forEach((e) => {
+console.log(e)
       const userDa = document.createElement("span");
-      userDa.className='by';
-      userDa.textContent = 'Posted by'+e.username;
+      userDa.className = "by";
+      userDa.textContent = "Posted by"
       const titleDa = document.createElement("h3");
-      titleDa.className='titlePost'
+      titleDa.className = "titlePost";
       titleDa.textContent = e.title;
-
+      const a = document.createElement("a");
+      a.className = "by2";
+      a.textContent =  e.username;
+      a.href = `/profile?id=${e.user_id}`;
       const contentDa = document.createElement("p");
-      contentDa.className='content'
+      contentDa.className = "content";
       contentDa.textContent = e.content;
 
       const section = document.createElement("section");
-      section.className='cont'
+      section.className = "cont";
       section.appendChild(userDa);
+      section.appendChild(a);
       section.appendChild(titleDa);
       section.appendChild(contentDa);
 

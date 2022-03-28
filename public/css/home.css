@@ -193,22 +193,24 @@ a {
 }
 
 .cont {
-  padding-left: 20px;
-  padding-top: 20px;
-  background-color: white;
-  width: 600px;
-  height: 20%;
-  margin-top: 15px;
-  margin-left: -70px;
-  margin-bottom: 20px;
-}
+ padding-left: 20px;
+    padding-top: 20px;
+    background-color: white;
+    width: 600px;
+    height: 30%;
+    margin-top: 15px;
+    margin-left: -70px;
+    margin-bottom: 20px;}
+
 .by{
   color: #7e7e7e;
     font-size: 0.8rem;
     margin-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+}
+.by2{
+  color: orangered;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
 }
 h3 {
   display: block;
