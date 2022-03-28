@@ -4,6 +4,7 @@ const logoutController = require("./logout");
 const addpostController = require("./addpostController");
 const getPostController = require("./getPostController");
 const getusernameController = require("./getusernameController");
+const getUserPost = require('./getUserPost')
 module.exports = {
   signUpController,
   loginController,
@@ -11,4 +12,5 @@ module.exports = {
   addpostController,
   getPostController,
   getusernameController,
+  getUserPost,
 };

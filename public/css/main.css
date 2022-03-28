@@ -41,7 +41,7 @@ img {
 .btn {
   display: inline-block;
   color: white;
-  background-color:orangered;
+  background-color: orangered;
   text-transform: capitalize;
   font-weight: 700;
   border: none;
@@ -71,7 +71,7 @@ img {
 }
 
 .btn:hover {
-  background-color: #9125EC;
+  background-color: #9125ec;
 }
 
 .flex-between {
@@ -253,7 +253,7 @@ img {
     font-size: 16px;
   }
   .main-navgation a:hover {
-    color: #5B09FA;
+    color: #5b09fa;
   }
 }
 
@@ -374,4 +374,3 @@ img {
 .landing .landing-image img {
   width: 100%;
 }
-

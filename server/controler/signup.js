@@ -30,7 +30,7 @@ const signUpController = (req, res, next) => {
       res
         .cookie("id", token, { httpOnly: true })
         .status(201)
-        .json({ massage: "Now You are have account",state:true })
+        .json({ massage: "Now You are have account", state: true })
     )
     .catch((err) => {
       if (err.name === "ValidationError") {

@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/home.css" />
     <script
-    src="https://kit.fontawesome.com/81c816aea5.js"
-    crossorigin="anonymous"
-  ></script>
+      src="https://kit.fontawesome.com/81c816aea5.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Home</title>
   </head>
   <body>
@@ -24,14 +24,15 @@
           <!-- <button id="btnH">Profile</button> -->
           <a href="/profile" id="btnH">Profile</a>
           <button id="logout">Logout</button>
-          
         </div>
       </div>
     </nav>
     <br />
+    <br /><br />
+    <div class="continer">
     <section class="trending">
       <h3 class="title">Trending Today</h3>
-      <br />
+      
       <div class="top-container">
         <div
           class="card"
@@ -72,18 +73,25 @@
       </div>
     </section>
 
-    <br>
+    <br />
     <h3 class="title">Create Post</h3>
-    <section class="create-post" >
+    
+    <section class="create-post">
       <div class="posts">
-        <form class="creating-post item" style="display: flex;" >
-          <input type="text" name="title" id="title" placeholder="title" required />
-          <input type="text" placeholder="content"   id="content"  required />
-          <button type="button" id="saveButton">add</button>
+        <form class="creating-post item" style="display: flex">
+          <input
+            type="text"
+            name="title"
+            id="title"
+            placeholder="title"
+            required
+          />
+          <input type="text" placeholder="content" id="content" required />
+          <button type="button" id="saveButton" >add</button>
         </form>
       </div>
     </section>
-    <br />
+   
 
     <!-- <div id="posts">
       <section>
@@ -92,17 +100,15 @@
         <p>content</p>
       </section>
     </div> -->
-<br>
+    <br />
     <h3 class="title">Popular Posts</h3>
+    
+    <div class="continer2">
     <div class="post-body">
-      <div class="by">
-        <span>Posted by <a href="/users/6">farah</a></span>
-      </div>
-      <h3 class="title">what a great job</h3>
+        <span class="by">Posted by Braa</span>
+      <h3 class="titlePost">what a great job</h3>
       <p class="content">wow</p>
     </div>
-
-
 
     <div class="popular-container">
       <div class="right">
@@ -111,19 +117,28 @@
           <div class="item">
             <span>1</span>
             <img
-              src="https://th.bing.com/th/id/OIP.hgaeMrZGp-Dvtq6L5S6aSwHaHa?w=198&h=198&c=7&r=0&o=5&pid=1.7"
-              alt="palestine falg"
+              src="https://styles.redditmedia.com/t5_2qhhk/styles/communityIcon_n7ckf4gv4ik11.png"
+              alt="r/dogs"
             />
-            <p>r/Palestine</p>
+            <p>r/dogs</p>
           </div>
           <div class="item" style="border: none">
             <span>2</span>
             <img
-              src="https://th.bing.com/th/id/OIP.ZmKy0xU9ZHYQLNnrnR3orQHaHa?pid=ImgDet&rs=1"
-              alt="Egypt falg"
+              src="https://78.media.tumblr.com/b5d43a9ba1d096c0c052ef99e6234183/tumblr_p6ryk7f8AB1tzkxwxo1_1280.jpg"
+              alt="r/aww"
             />
-            <p>r/Egypt</p>
+            <p>r/aww</p>
           </div>
+          <!-- <div class="item" style="border: none">
+            <span>3</span>
+            <img
+              src="https://www.purina-arabia.com/sites/default/files/2021-02/BREED%20Hero_0059_golden_retriever.jpg"
+              alt="r/goldenretrievers"
+            />
+            <p>r/goldenretrievers</p>
+          </div> -->
+  
           <button class="btn">View All</button>
           <ul class="list">
             <li>Top</li>
@@ -157,6 +172,8 @@
         </div>
       </div>
     </div>
+  </div>
+  </div>
     <script src="../js/home.js"></script>
   </body>
 </html>

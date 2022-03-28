@@ -53,14 +53,14 @@ form.addEventListener("submit", (event) => {
       email: email.value,
       password: password.value,
     }),
-  }).then((response) =>  response.json())
-  .then((data)=>{
-      console.log(data)
-      if(data.state){
-          window.location.assign('/home')
-      }else{
-        swal('ERROR!',data.message,'error')
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      if (data.state) {
+        window.location.assign("/home");
+      } else {
+        swal("ERROR!", data.message, "error");
       }
-  }
-  )
+    });
 });
