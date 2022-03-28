@@ -1,0 +1,14 @@
+.card2 {
+  box-shadow: 0 4px 8px 0;
+  background-color: orangered;
+  max-width: 300px;
+  margin-left: 1200px;
+  text-align: center;
+  font-family: arial;
+  text-transform: capitalize;
+}
+
+.title {
+  color: white;
+  font-size: 18px;
+}

@@ -7,8 +7,8 @@ const authHome = (req, res, next) => {
   } else {
     veryfy(id)
       .then((token) => {
-        req.userId=token.id
-        next()
+        req.userId = token.id;
+        next();
       })
       .catch((err) => next(err));
   }
