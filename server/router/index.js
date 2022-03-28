@@ -9,6 +9,8 @@ const {
   getPostController,
   getusernameController,
   getUserPost,
+  deletePostController,
+  getProfileUserController,
 } = require("../controler");
 const serverError = require("../controler/error");
 const { authHome, authUser } = require("../middleware");
@@ -31,10 +33,9 @@ router.get("/logout", logoutController);
 router.post("/addpost", authHome, addpostController);
 router.get("/getPost", getPostController);
 router.get("/user", authHome, getusernameController);
-router.get('/userPosts',authHome,getUserPost);
-
-
-
+router.get("/userPosts", authHome, getUserPost);
+router.delete("/delete/:id", deletePostController);
+router.get("/profile/:id", getProfileUserController);
 
 router.use(serverError);
 
