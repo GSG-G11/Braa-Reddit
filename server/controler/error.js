@@ -1,3 +1,11 @@
+const { join } = require('path');
+const clientError = (req,res)=>{
+  res
+  .status(404)
+  .sendFile(join(__dirname, '..', '..', 'public', 'html', '404.html'));
+}
+
+
 const serverError = (err, req, res, next) => {
   const internalServerError =
     '<p style="font-size: 10vh; text-align: center;">500!</p>';
@@ -9,4 +17,4 @@ const serverError = (err, req, res, next) => {
   }
 };
 
-module.exports = serverError;
+module.exports = {serverError,clientError};
