@@ -46,13 +46,17 @@ console.log(e)
       const contentDa = document.createElement("p");
       contentDa.className = "content";
       contentDa.textContent = e.content;
-
+      const btn = document.createElement("a");
+      a.className = "comments";
+      a.textContent =  'Comments';
+      a.href = `/comments/${e.id}/show`;
       const section = document.createElement("section");
       section.className = "cont";
       section.appendChild(userDa);
       section.appendChild(a);
       section.appendChild(titleDa);
       section.appendChild(contentDa);
+      section.appendChild(btn);
 
       posts.appendChild(section);
     })

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/comment.css">
+    <title>Comments</title>
+</head>
+<body>
+    <nav>
+        <div class="nav">
+          <a class="logo" href="#">Reddit</a>
+          <div class="search">
+            <i class="fas fa-search icon"></i>
+            <input type="text" placeholder="Search Reddit" id="serach-input" />
+          </div>
+          <div class="btnlk">
+            <p class="username">Welcome</p>
+            <a href="/profile" id="btnH">Profile</a>
+            <button id="logout">Logout</button>
+          </div>
+        </div>
+      </nav>
+
+      <br>
+      <div class="post-body">
+          <!-- <section class="cont2">
+        <span class="by">Posted by Braa</span>
+    <h3 class="titlePost">what a great job</h3>
+    <p class="content">wow</p>
+     </section>  -->
+    </div>
+
+    <h3 class="title">Comments</h3>
+
+    <div class="comentDev">
+    <!-- <section class="cont2">
+        <span class="by">Posted by Braa</span>
+    <p class="content">comments</p>
+     </section>  -->
+    </div>
+ <h3 class="title">Add Comments</h3>
+
+      <section class="create-post">
+        <div class="posts">
+          <form class="creating-post item" style="display: flex">
+            <input
+              type="text"
+              name="title"
+              id="content"
+              placeholder="Comments"
+              required
+            />
+            <button type="button" id="saveButton">add</button>
+          </form>
+        </div>
+      </section>
+
+      <script src="/js/comment.js"></script>
+</body>
+</html>

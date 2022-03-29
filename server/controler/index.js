@@ -7,6 +7,9 @@ const getusernameController = require("./getusernameController");
 const getUserPost = require("./getUserPost");
 const deletePostController = require("./deletePostController");
 const getProfileUserController = require("./getProfileUserController");
+const getSinglePostController = require("./getSinglePostController");
+const addCommentController = require("./addCommentController");
+const getCommentController = require("./getCommentController");
 module.exports = {
   signUpController,
   loginController,
@@ -17,4 +20,7 @@ module.exports = {
   getUserPost,
   deletePostController,
   getProfileUserController,
+  getSinglePostController,
+  addCommentController,
+  getCommentController,
 };
