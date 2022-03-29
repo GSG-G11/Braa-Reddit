@@ -5,7 +5,9 @@ const getpostQuery = require("./getpostQuery");
 const getUserByname = require("./getUsernameQuery");
 const getuserpostQuery = require("./getUserPostQuery");
 const deletePostQuery = require("./deletePostQuery");
-
+const addCommentQuery = require("./addCommentQuery");
+const getPostCommentsQuery = require("./getCommentsQurey");
+const getSinglePostQuery = require("./getSinglePostQuery");
 module.exports = {
   getUserByEmail,
   postUserQuery,
@@ -14,4 +16,7 @@ module.exports = {
   getUserByname,
   getuserpostQuery,
   deletePostQuery,
+  addCommentQuery,
+  getPostCommentsQuery,
+  getSinglePostQuery,
 };

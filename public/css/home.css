@@ -228,7 +228,18 @@ p {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
 }  
-
+.comments{
+  all: unset;
+  background-color: green;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  margin-left: 450px;
+}
 .title {
   color: #1a1a1b;
   padding: 10px;

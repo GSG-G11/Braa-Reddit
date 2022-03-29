@@ -11,8 +11,11 @@ const {
   getUserPost,
   deletePostController,
   getProfileUserController,
+  getSinglePostController,
+  addCommentController,
+  getCommentController,
 } = require("../controler");
-const {serverError,clientError} = require("../controler/error");
+const { serverError, clientError } = require("../controler/error");
 const { authHome, authUser } = require("../middleware");
 
 router.get("/signup", authUser, (req, res) => {
@@ -27,6 +30,11 @@ router.get("/home", authHome, (req, res) => {
 router.get("/profile", authHome, (req, res) => {
   res.sendFile(join(__dirname, "..", "..", "public", "html", "profile.html"));
 });
+
+router.get("/comments/:id/show", authHome, (req, res) => {
+  res.sendFile(join(__dirname, "..", "..", "public", "html", "comment.html"));
+});
+
 router.post("/signup", signUpController);
 router.post("/login", loginController);
 router.get("/logout", logoutController);
@@ -36,7 +44,9 @@ router.get("/user", authHome, getusernameController);
 router.get("/userPosts", authHome, getUserPost);
 router.delete("/delete/:id", deletePostController);
 router.get("/profile/:id", getProfileUserController);
-
+router.get("/comment/:id", getSinglePostController);
+router.post("/addComment/:id", authHome, addCommentController);
+router.get("/showComment/:id", getCommentController);
 router.use(clientError);
 router.use(serverError);
 
