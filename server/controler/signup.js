@@ -13,7 +13,6 @@ const { signcookie } = require("../utils/cookies/cookiesPromise");
 
 const signUpController = (req, res, next) => {
   const { username, email, password } = req.body;
-  // console.log(req.body)
   signupSchema
     .validateAsync(req.body, { abortEarly: false })
     .then(() => getUserByEmail(email))

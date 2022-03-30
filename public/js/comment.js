@@ -45,16 +45,15 @@ saveButton.addEventListener("click", (e) => {
 });
 
 //get comment
-//{id: 7, post_id: 1, content: 'asdfgh', username: 'ahmed'}
-
-
-// <!-- <section class="cont2">
-// <span class="by">Posted by Braa</span>
-// <p class="content">comments</p>
-// </section>  -->
 fetch(`/showComment/${id}`)
   .then((data) => data.json())
   .then(value=>{
+    if (!value.length) {
+      const noValue = document.createElement("div");
+      noValue.className = "no-posts";
+      noValue.textContent = "No comments Yet";
+      posts.appendChild(noValue);
+    } else {
       value.forEach(e => {
         const userDa = document.createElement("span");
         userDa.className = "by";
@@ -72,5 +71,16 @@ fetch(`/showComment/${id}`)
         section.appendChild(contentDa);
         comentDev.appendChild(section);
       });
+    }
+  });
 
+  //get username logo
+  fetch("/user")
+  .then((data) => data.json())
+  .then((value) => {
+    const userNa = document.querySelector(".username");
+    const username = document.createElement("span");
+    username.className = "user";
+    username.textContent = value[0].username;
+    userNa.appendChild(username);
   });

@@ -71,35 +71,38 @@ if (!id) {
         });
       }
     });
-    // {id: 3, username: 'braa', email: 'braa13@hotmail.com', 
 } else {
   fetch(`/profile/${id}`)
     .then((data) => data.json())
-    .then(([post,user])=> 
-      {
+    .then(([post, user]) => {
       name1.textContent = user[0].username;
       email.textContent = user[0].email;
 
-      post.forEach(e=>{
-        const userDa = document.createElement("span");
-        userDa.className = "by";
-        userDa.textContent = "Posted by" + e.username;
-        const titleDa = document.createElement("h3");
-        titleDa.className = "titlePost";
-        titleDa.textContent = e.title;
+      post.forEach((e) => {
+        if (!post.length) {
+          const noValue = document.createElement("div");
+          noValue.className = "no-posts";
+          noValue.textContent = "No Posts Yet";
+          posts.appendChild(noValue);
+        } else {
+          const userDa = document.createElement("span");
+          userDa.className = "by";
+          userDa.textContent = "Posted by" + e.username;
+          const titleDa = document.createElement("h3");
+          titleDa.className = "titlePost";
+          titleDa.textContent = e.title;
 
-        const contentDa = document.createElement("p");
-        contentDa.className = "content";
-        contentDa.textContent = e.content;
+          const contentDa = document.createElement("p");
+          contentDa.className = "content";
+          contentDa.textContent = e.content;
 
-        const section = document.createElement("section");
-        section.className = "cont";
-        section.appendChild(userDa);
-        section.appendChild(titleDa);
-        section.appendChild(contentDa);
-        posts.appendChild(section);
-      })
-    }
-    );
+          const section = document.createElement("section");
+          section.className = "cont";
+          section.appendChild(userDa);
+          section.appendChild(titleDa);
+          section.appendChild(contentDa);
+          posts.appendChild(section);
+        }
+      });
+    });
 }
-
