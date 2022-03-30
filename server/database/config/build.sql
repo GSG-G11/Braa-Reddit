@@ -22,7 +22,7 @@ CREATE TABLE comments (
 );
 
 INSERT INTO users (userName,email,password) VALUES ('braa','braa@hotmail.com','a123456');
--- INSERT INTO posts (user_id,title,content) VALUES (1,"braa","braa awnii");
+--  INSERT INTO posts (user_id,title,content) VALUES (1,"braa","braa awnii");
 -- INSERT INTO comments (user_id,post_id,content) VALUES (1,1,'hello beroo');
 
 COMMIT;
