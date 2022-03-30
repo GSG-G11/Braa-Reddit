@@ -1,15 +1,14 @@
-const { join } = require('path');
-const clientError = (req,res)=>{
+const { join } = require("path");
+const clientError = (req, res) => {
   res
-  .status(404)
-  .sendFile(join(__dirname, '..', '..', 'public', 'html', '404.html'));
-}
-
+    .status(404)
+    .sendFile(join(__dirname, "..", "..", "public", "html", "404.html"));
+};
 
 const serverError = (err, req, res, next) => {
   const internalServerError =
     '<p style="font-size: 10vh; text-align: center;">500!</p>';
-  console.log(err);
+
   if (err.status) {
     res.status(err.status).json({ status: err.status, message: err.message });
   } else {
@@ -17,4 +16,4 @@ const serverError = (err, req, res, next) => {
   }
 };
 
-module.exports = {serverError,clientError};
+module.exports = { serverError, clientError };
