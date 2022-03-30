@@ -7,6 +7,7 @@ const {
   getpostQuery,
   getuserpostQuery,
   deletePostQuery,
+  getSinglePostQuery,
 } = require("../database/query");
 
 beforeEach(() => dbBuild());
@@ -35,26 +36,26 @@ test("test add user", () => {
 });
 
 test("test get user by email", () => {
-    return getUserByEmail("braa@hotmail.com").then(
-      (data) => {
-        expect(data.rowCount).toBe(1);
-        expect(data.rows[0].username).toBe('braa');
-      }
-    );
+  return getUserByEmail("braa@hotmail.com").then((data) => {
+    expect(data.rowCount).toBe(1);
+    expect(data.rows[0].username).toBe("braa");
   });
+});
 
-  test("test get posts to one user", () => {
-    return getuserpostQuery(1).then(
-      (data) => {
-        expect(data.rowCount).toBe(0);
-      }
-    );
+test("test get posts to one user", () => {
+  return getuserpostQuery(1).then((data) => {
+    expect(data.rowCount).toBe(0);
   });
+});
 
-  test("test delete posts ", () => {
-    return  deletePostQuery(2).then(
-      (data) => {
-        expect(data.rowCount).toBe(0);
-      }
-    );
+test("test delete posts ", () => {
+  return deletePostQuery(2).then((data) => {
+    expect(data.rowCount).toBe(0);
   });
+});
+
+test("test get single posts ", () => {
+  return getSinglePostQuery(1).then((data) => {
+    expect(data.rowCount).toBe(0);
+  });
+});
